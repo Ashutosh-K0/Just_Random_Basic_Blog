@@ -13,24 +13,103 @@
       body {
         font-family: "Arial", sans-serif;
       }
+
+      .navbar {
+        background-color: #007bff;
+      }
+
+      .navbar-brand,
+      .nav-link {
+        color: white !important;
+        font-weight: bold;
+      }
+
       .hero {
-        background: linear-gradient(to right, #007bff, #00c6ff);
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+          url("https://source.unsplash.com/1600x900/?technology,blog");
+        background-size: cover;
         color: white;
         text-align: center;
-        padding: 50px 0;
+        padding: 70px 0;
       }
+
+      .hero h1 {
+        font-size: 3rem;
+        font-weight: bold;
+      }
+
+      .hero p {
+        font-size: 1.5rem;
+        margin-top: 15px;
+      }
+
       .section-title {
         color: #007bff;
         font-weight: bold;
         margin-bottom: 20px;
       }
+
+      .card {
+        border: none;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
       .card:hover {
-        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+        transform: scale(1.05);
+        box-shadow: 0px 6px 25px rgba(0, 0, 0, 0.2);
+      }
+
+      footer {
+        background-color: #007bff;
+        color: white;
+      }
+
+      footer a {
+        color: white;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
       }
     </style>
   </head>
   <body>
-    <!-- Header Section -->
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">My Blog</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#about-me">About Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#education">Education</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#future-goals">Goals</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#achievements">Achievements</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#courses">Courses</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
     <header class="hero">
       <h1>Welcome to My Blog</h1>
       <p>Your go-to place to learn more about me!</p>
@@ -41,7 +120,7 @@
       <section id="about-me">
         <h2 class="section-title">About Me</h2>
         <p>
-          Hello! I'm Ashutosh Kumar, a passionate learner and an aspiring [Your
+          Hello! I'm [Your Name], a passionate learner and an aspiring [Your
           Dream Profession]. I love exploring new technologies and continuously
           strive to enhance my skills.
         </p>
@@ -138,8 +217,12 @@
     </div>
 
     <!-- Footer -->
-    <footer class="text-center bg-light py-3">
-      <p>&copy; 2024 [Your Name]. All rights reserved.</p>
+    <footer class="text-center py-3">
+      <div class="container">
+        <p>&copy; 2024 [Your Name]. All rights reserved.</p>
+        <a href="#">Facebook</a> | <a href="#">Twitter</a> |
+        <a href="#">LinkedIn</a>
+      </div>
     </footer>
 
     <!-- Bootstrap JS -->
